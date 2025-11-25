@@ -7,10 +7,12 @@
 #include <vector>
 
 class GenericShape2D {
-    private:
+    protected:
         std::vector<GLfloat> m_vertices{};
         std::vector<GLuint> m_indices{};
 
+
+    private:
         GLenum m_drawMode{};
 
         GLuint m_VBO{};
