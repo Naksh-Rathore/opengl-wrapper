@@ -2,7 +2,7 @@
 
 ## Overview
 
-A simple repo designed to help you get started on OpenGL. It uses Visual Studio Code, Windows 11 and x64-based processor. The file paths are according to my computer, so I recommend changing them to your own.
+A custom OpenGL wrapper made to help me and others code faster. It uses OOP and modern C++ to have a smooth experience writing OpenGL code for games, simulations, and more!
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ A simple repo designed to help you get started on OpenGL. It uses Visual Studio 
 2. Change the file paths in the project configs to your own
 3. Code something and run it!
 
-The makefile can be used with many files without needing to change the makefile, but the library paths do need to be changed.
+The makefile can be used with many files without needing to change, but the library paths do need to be changed only once.
 
 # Contributing
 
