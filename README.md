@@ -6,7 +6,7 @@ A custom OpenGL wrapper made to help me and others code faster. It uses OOP and 
 
 ## Getting Started
 
-1. Clone the repo: git clone `https://github.com/Naksh-Rathore/opengl-vscode-starter.git`
+1. Clone the repo: `git clone https://github.com/Naksh-Rathore/opengl-wrapper.git`
 2. Change the file paths in the project configs to your own
 3. Code something and run it!
 
