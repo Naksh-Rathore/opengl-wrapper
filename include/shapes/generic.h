@@ -11,7 +11,6 @@ class GenericShape2D {
         std::vector<GLfloat> m_vertices{};
         std::vector<GLuint> m_indices{};
 
-
     private:
         GLenum m_drawMode{};
 
@@ -21,7 +20,7 @@ class GenericShape2D {
 
     public:
         GenericShape2D(const std::vector<GLfloat>& vertices, const std::vector<GLuint>& indices = {}, GLenum drawMode = GL_TRIANGLE_FAN);
-        ~GenericShape2D();
+        virtual ~GenericShape2D();
 
         void link();
         void draw(GLuint first, GLuint count, GLenum drawMode = 0);
