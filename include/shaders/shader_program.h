@@ -6,20 +6,23 @@
 
 #include "shaders/shader.h"
 
-class ShaderProgram {
-    private:
-        GLuint m_shaderProgram{};
+namespace Shader {
+    class ShaderProgram {
+        private:
+            GLuint m_shaderProgram{};
 
-    public:
-        ShaderProgram();
-        ~ShaderProgram();
+        public:
+            ShaderProgram();
+            ~ShaderProgram();
 
-        void link(Shader& vertexShader, Shader& fragmentShader);
-        void use();
+            void link(Shader& vertexShader, Shader& fragmentShader);
+            void use();
 
-        GLuint shaderProgram() const { return m_shaderProgram; }
-        void setShaderProgram(GLuint val) { m_shaderProgram = val; }
+            GLuint shaderProgram() const { return m_shaderProgram; }
+            void setShaderProgram(GLuint val) { m_shaderProgram = val; }
 
-};
+    };
+}
+
 
 #endif

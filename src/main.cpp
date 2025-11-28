@@ -12,7 +12,7 @@ void processInput(GLFWwindow *window);
 
 int main() {
     
-    GLFWwindow *window { initOpenGL() };
+    GLFWwindow *window { Init::initOpenGL() };
 
     if (window == nullptr)
         return EXIT_FAILURE;

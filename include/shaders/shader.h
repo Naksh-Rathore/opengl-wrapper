@@ -6,26 +6,30 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-class Shader {
-    private:
-        std::string m_shaderSourceContent{};
-        GLenum m_shaderType{};
-        GLuint m_shader{};
+namespace Shader {
 
-        std::string readShader(const std::string& shaderSourceFile);
+    class Shader {
+        private:
+            std::string m_shaderSourceContent{};
+            GLenum m_shaderType{};
+            GLuint m_shader{};
 
-    public:
-        Shader(const std::string& shaderSourceFile, GLenum shaderType);
+            std::string readShader(const std::string& shaderSourceFile);
 
-        void compileShader();
+        public:
+            Shader(const std::string& shaderSourceFile, GLenum shaderType);
 
-        GLenum shaderType() const { return m_shaderType; }
-        GLuint shader() const { return m_shader; }
-        std::string shaderSource() const { return m_shaderSourceContent; }
+            void compileShader();
 
-        void setShaderSourceContent(const std::string_view& source) { m_shaderSourceContent = source; }
-        void setShaderType(GLenum type) { m_shaderType = type; }
-        void setShader(GLuint shader) { m_shader = shader; }
+            GLenum shaderType() const { return m_shaderType; }
+            GLuint shader() const { return m_shader; }
+            std::string shaderSource() const { return m_shaderSourceContent; }
+
+            void setShaderSourceContent(const std::string_view& source) { m_shaderSourceContent = source; }
+            void setShaderType(GLenum type) { m_shaderType = type; }
+            void setShader(GLuint shader) { m_shader = shader; }
+    };
+    
 };
 
 #endif

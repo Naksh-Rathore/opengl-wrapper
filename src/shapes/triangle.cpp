@@ -6,11 +6,14 @@
 #include "shapes/triangle.h"
 #include "shapes/generic.h"
 
-Triangle2D::Triangle2D(std::vector<GLfloat> vertices)
-    : GenericShape2D(vertices, {}, GL_TRIANGLES)
-{
+namespace Shape {
+    Triangle2D::Triangle2D(std::vector<GLfloat> vertices)
+        : GenericShape2D(vertices, {}, GL_TRIANGLES)
+    {
+    }
+
+    void Triangle2D::draw() {
+        glDrawArrays(drawMode(), 0, 3);
+    }
 }
 
-void Triangle2D::draw() {
-    glDrawArrays(drawMode(), 0, 3);
-}

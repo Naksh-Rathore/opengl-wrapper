@@ -7,8 +7,10 @@
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 800
 
-void framebuffer_size_callback(GLFWwindow *window, int width, int height);
+namespace Init {
+    void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 
-GLFWwindow* initOpenGL();
+    GLFWwindow* initOpenGL();
+};
 
 #endif

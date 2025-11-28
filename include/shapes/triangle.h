@@ -8,11 +8,13 @@
 
 #include "shapes/generic.h"
 
-class Triangle2D : public GenericShape2D {
-    public:
-        explicit Triangle2D(std::vector<GLfloat> vertices);
+namespace Shape {
+    class Triangle2D : public GenericShape2D {
+        public:
+            explicit Triangle2D(std::vector<GLfloat> vertices);
 
-        void draw();
-};
+            void draw();
+    };
+}
 
 #endif

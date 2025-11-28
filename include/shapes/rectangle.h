@@ -8,12 +8,13 @@
 
 #include "shapes/generic.h"
 
+namespace Shape {
+    class Rectangle2D : public GenericShape2D {
+        public:
+            Rectangle2D(std::vector<GLfloat>& vertices, std::vector<GLuint> indices);
 
-class Rectangle2D : public GenericShape2D {
-    public:
-        Rectangle2D(std::vector<GLfloat>& vertices, std::vector<GLuint> indices);
-
-        void draw();
-};
+            void draw();
+    };
+}
 
 #endif
