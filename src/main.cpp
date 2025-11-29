@@ -1,14 +1,11 @@
-#define _USE_MATH_DEFINES
-#include <cmath>
-
 #include <iostream>
-
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
 
 #include "init/init_gl.h"
 
-void processInput(GLFWwindow *window);
+#include <glad/glad.h>
+#include <GLFW/glfw3.h> 
+
+void processInput(GLFWwindow*window);
 
 int main() {
     
@@ -34,3 +31,4 @@ void processInput(GLFWwindow *window) {
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 }
+

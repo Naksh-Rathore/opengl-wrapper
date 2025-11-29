@@ -24,6 +24,8 @@ namespace Shape {
             virtual ~GenericShape2D();
 
             void link();
+            void linkAttrib(int index, int size, int stride, void *offset);
+
             void draw(GLuint first, GLuint count, GLenum drawMode = 0);
 
             void addVertex(GLfloat x, GLfloat y);

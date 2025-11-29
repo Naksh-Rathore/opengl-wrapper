@@ -29,7 +29,6 @@ namespace Shader {
 
         while (std::getline(shaderFileStream, shaderContentsBuffer))
             shaderContents += shaderContentsBuffer + "\n";
-        std::cout << shaderContents;
 
         shaderFileStream.close();
         return shaderContents;

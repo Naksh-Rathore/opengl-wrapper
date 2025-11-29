@@ -28,8 +28,7 @@ namespace Shape {
         glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
         glBufferData(GL_ARRAY_BUFFER, m_vertices.size() * sizeof(GLfloat), m_vertices.data(), GL_STATIC_DRAW);
 
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (void*)0);
-        glEnableVertexAttribArray(0);  
+        linkAttrib(0, 3, 3 * sizeof(GLfloat), (void *) 0);
 
         if (!m_indices.empty()) {
             glGenBuffers(1, &m_EBO);
@@ -64,6 +63,12 @@ namespace Shape {
             m_vertices.pop_back();
             m_vertices.pop_back();
         }
+    }
+
+
+    void GenericShape2D::linkAttrib(int index, int size, int stride, void *offset) {
+        glVertexAttribPointer(index, size, GL_FLOAT, GL_FALSE, stride, offset);
+        glEnableVertexAttribArray(index);
     }
 
 }
