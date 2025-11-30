@@ -24,7 +24,8 @@ namespace Shader {
         std::ifstream shaderFileStream(shaderSourceFile);
 
         if (!shaderFileStream.is_open()) {
-            throw std::runtime_error("Failed to open shader file: " + shaderSourceFile);
+            std::cerr << "Failed to open shader file: " << shaderSourceFile << "\n";
+            return;
         }
 
         while (std::getline(shaderFileStream, shaderContentsBuffer))
