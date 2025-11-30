@@ -1,8 +1,8 @@
-# GLFW, GLAD, and OpenGL Starter
+# OpenGL Wrapper
 
 ## Overview
 
-A custom OpenGL wrapper made to help me and others code faster. It uses OOP and modern C++ to have a smooth experience writing OpenGL code for games, simulations, and more!
+A custom OpenGL wrapper made to help me and others code faster. It uses OOP and modern C++ to have a smooth experience writing OpenGL code for simple games, simulations, and more! This is a really simple wrapper so it mostly behaves like RayLib or SFML, not something more complicated like SDL.
 
 ## Getting Started
 
