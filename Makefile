@@ -1,19 +1,19 @@
 # Compiler and flags
 CXX := g++
-CXXFLAGS := -std=c++17 -Wall -Wextra -O2 \
+CXXFLAGS := -std=c++23 -Wall -Wextra -O2 \
     -I C:/Users/kumar/glad/include \
     -I C:/Users/kumar/glfw-3.4.bin.WIN64/glfw-3.4.bin.WIN64/include \
-	-I include/
+    -I include/
 
 LDFLAGS := -L C:/Users/kumar/glfw-3.4.bin.WIN64/glfw-3.4.bin.WIN64/lib-mingw-w64 -lglfw3 -lgdi32 -lopengl32
 
-# Find all cpp files recursively
+# ONLY compile files in src/
 ifeq ($(OS),Windows_NT)
-    SRCS := $(shell powershell -Command "Get-ChildItem -Recurse -Filter *.cpp | ForEach-Object { $$_.FullName }") \
+    SRCS := $(shell powershell -Command "Get-ChildItem src -Recurse -Filter *.cpp | ForEach-Object { $$_.FullName }") \
             C:/Users/kumar/glad/src/glad.c
-    RM := powershell -Command "Get-ChildItem -Include *.o -Recurse | Remove-Item -ErrorAction SilentlyContinue"
+    RM := powershell -Command "Get-ChildItem -Recurse -Include *.o | Remove-Item -ErrorAction SilentlyContinue"
 else
-    SRCS := $(shell find . -name "*.cpp") C:/Users/kumar/glad/src/glad.c
+    SRCS := $(shell find src -name "*.cpp") C:/Users/kumar/glad/src/glad.c
     RM := rm -f *.o
 endif
 
