@@ -184,7 +184,7 @@ int main() {
     int width, height, nrChannels;
     stbi_set_flip_vertically_on_load(true);
 
-    unsigned char *data { stbi_load("assets/textures/dvd-xxl.png", &width, &height, &nrChannels, 4) };
+    unsigned char *data { stbi_load("assets/dvd-xxl.png", &width, &height, &nrChannels, 4) };
 
     if (data == nullptr) {
         std::cerr << "Could not load texture" << "\n";
