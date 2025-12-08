@@ -232,7 +232,7 @@ int main() {
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
         
-    glUseProgram(shaderProg);
+        glUseProgram(shaderProg);
 
         glm::mat4 view { glm::mat4(1.0f) };
         view = glm::translate(view, glm::vec3(0.0f, 0.0f, -10.0f)); 
