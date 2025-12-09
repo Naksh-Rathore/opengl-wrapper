@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "init/init_gl.h"
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h> 
+
+#include "init/init_gl.h"
 
 void processInput(GLFWwindow*window);
 
