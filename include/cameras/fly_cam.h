@@ -5,14 +5,16 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-enum CameraDirection {
-    FORWARD,
-    BACKWARD,
-    LEFT,
-    RIGHT
-};
+namespace Camera {
+    
+    enum CameraDirection {
+        FORWARD,
+        BACKWARD,
+        LEFT,
+        RIGHT
+    };  
 
-class FlyCamera {
+    class FlyCamera {
     private:
         glm::vec3 m_pos{};
         glm::vec3 m_front{};
@@ -73,4 +75,6 @@ class FlyCamera {
         void zoom(float val) { m_zoom = val; }      
 };
     
+}
+
 #endif
