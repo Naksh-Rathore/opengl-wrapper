@@ -5,7 +5,7 @@
 
 #include "init/init_gl.h"
 
-void processInput(GLFWwindow*window);
+void processInput(GLFWwindow *window);
 
 int main() {
     
